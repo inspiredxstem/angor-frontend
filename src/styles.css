@@ -1,0 +1,438 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* Landing Page */
+.landingpage {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f2eba7;
+  /* padding-bottom: 9rem; */
+  height: 100vh;
+}
+
+.blobs {
+  position: absolute;
+  display: flex;
+  margin: auto;
+}
+
+.maintext_name {
+  color: black;
+  margin: 10rem 5rem auto auto;
+  padding: 0;
+  width: auto;
+}
+
+.upText h5 {
+  margin: 0;
+  text-align: left;
+  font-size: 67px;
+  font-weight: 500;
+}
+
+.upText h5 span {
+  color: green;
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 45%;
+}
+
+.arrowDown {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  width: 30px;
+  height: 30px;
+  /* opacity: 0.8; */
+  color: #e0d9ad;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.about {
+  background-color: #f2eba7;
+  height: 100vh;
+  display: none;
+}
+
+/* Blobs */
+.blob_img {
+  position: relative;
+}
+
+.right {
+  width: 17rem;
+}
+
+.left,
+.top {
+  width: 8rem;
+}
+
+.bottom {
+  width: 10rem;
+}
+
+.right,
+.left,
+.top,
+.bottom {
+  display: inline-block;
+}
+
+.right {
+  width: 17rem;
+  margin-top: 18rem;
+  margin-right: 0rem;
+  z-index: 10;
+}
+
+.left {
+  margin-left: 5rem;
+  margin-top: 20rem;
+}
+
+.top {
+  margin-top: 10rem;
+  margin-left: 0rem;
+}
+
+.bottom {
+  width: 10rem;
+  margin-top: 27rem;
+}
+
+.left,
+.top {
+  width: 8rem;
+}
+
+.input-login,
+input[type="text"] {
+  /* remove-text */
+  background-color: #f2eba7;
+  border: none;
+  border-bottom: 1px solid blue;
+}
+/* Landing Page NavBar */
+.landing-navbar {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 0;
+  padding-left: 4rem;
+}
+
+.initials p {
+  margin: 0 auto;
+  justify-content: center;
+  font-size: 28px;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 550;
+}
+
+.logo,
+.landing-navbar-menu {
+  color: black;
+}
+
+.landing-navbar-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-right: 0;
+  padding-right: 4rem;
+}
+
+.logo_title h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: green;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.logo_name p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.landing-nav-items {
+  font-size: 20px;
+  font-weight: 300;
+  color: red;
+  margin-left: 2rem;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 5px;
+  font-weight: 400;
+  color: red;
+}
+
+a::after {
+  content: "";
+  width: 0;
+  height: 1.5px;
+  background-color: green;
+  display: block;
+  margin: 5px auto;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:hover::after {
+  width: 70%;
+}
+
+a.active {
+  font-weight: 400;
+  color: #d1e2c0;
+}
+
+@media screen and (max-width: 550px) {
+  .logo {
+    padding-left: 2rem;
+  }
+  .landing-navbar-menu {
+    padding-right: 2rem;
+  }
+  .logo_title h2 {
+    font-size: 18px;
+  }
+  .logo_name p {
+    font-size: 12px;
+  }
+  .landing-nav-items {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .logo {
+    padding-left: 2rem;
+  }
+  .landing-navbar-menu {
+    padding-right: 2rem;
+  }
+  .logo_title h2 {
+    font-size: 15px;
+  }
+  .logo_name p {
+    font-size: 12px;
+  }
+  .landing-nav-items {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .landing-navbar {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo {
+    padding-left: 0;
+    padding-bottom: 0.5rem;
+  }
+  .landing-navbar-menu {
+    padding-right: 0;
+  }
+  .logo_title h2 {
+    font-size: 18px;
+  }
+  .logo_name p {
+    font-size: 12px;
+  }
+  .landing-nav-items {
+    font-size: 15px;
+  }
+}
+
+/* Home */
+.home {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-left: 100px;
+  background-color: #f2eba7;
+  height: 100vh;
+  /* position: relative; */
+  /* padding: 1rem; */
+}
+
+.dailyQuote {
+  height: 200px;
+  width: 1000px;
+  background-color: yellow;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blobContainer {
+  height: 100px;
+  width: 100vw;
+  margin-top: auto;
+}
+
+.blob {
+  height: 100px;
+  width: 200px;
+}
+
+/* Navbar for rest for APP */
+.appNavbar {
+  width: 100px;
+  height: 100vh;
+  background-color: yellow;
+  position: fixed;
+  transition: width 600ms ease;
+}
+
+.appNavbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100px;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link-text {
+  display: none;
+  margin-left: 16px;
+}
+
+.appNavbar:hover {
+  width: 175px;
+}
+
+.appNavbar:hover .link-text {
+  display: block;
+}
+#circle {
+  background-color: white;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  border: 2px solid blue;
+}
+/* Connection */
+.connectionPage {
+  overflow: hidden;
+  margin-left: 100px;
+  background-color: #f2eba7;
+  height: 100vh;
+  /* position: relative; */
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 350px;
+  /* bckground-color: black; */
+}
+
+.userVideo {
+  margin-top: 65px;
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+}
+
+.otherUserVideo {
+  margin-top: 65px;
+  height: 300px;
+  width: 300px;
+  background-color: red;
+}
+
+.topicTimer {
+  display: flex;
+  height: 85px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer {
+  margin-top: 10px;
+}
+
+.topic {
+  margin-top: 10px;
+}
+
+.conversationContainer {
+  height: 250px;
+  background-color: #efa8a8;
+  position: sticky;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+}
